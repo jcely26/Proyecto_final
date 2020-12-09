@@ -215,10 +215,16 @@ switch(arknv) {
     mapa =new Mapa(10, 20,10);
   }
 void nuevoark(){
+   fact.rest();
+    finv.rest();
   this.arknv=1;
-ball.rest();
+  ball.rest();
    pad.auxiliar[2][0]=0;
-    mapa =new Mapa(10, 20,1);}
+    mapa =new Mapa(10, 20,1);
+  mapa.agregarfichas(10);
+
+
+}
   //copimaos las coordenadas en y de la actual en la invisible
   void restyinv() {
     finv.camby(fact.gety());
@@ -240,8 +246,14 @@ this.arknv+=t;
   }
   
   void tetrinoidrun(){
-    this.run();
-    this.tetrinoidpaint();
+    this.arkpaint();
+    this.niveles();
+    this.restyinv();
+    finv.camby(finv.inv(mapa));
+    this.deadficha(fact, mapa);
+    //fsig.posx();
+    fact.move();
+    this.tetranoidpaint();
       ball.move(mapa);
       mapa.actualizar_mapatetranoid();
     }
@@ -307,12 +319,12 @@ void arkperder() {
     fsig.paint();
     
   }
-   void tetrinoidpaint() {
+   void tetranoidpaint() {
      this.paint();
      textSize(30);
     fill(0, 170, 255);
      text(puntajeln+"        "+ball.cart(), 800, 520);
-  ball.paint();
+    ball.paint();
     ball.paintln();}
   
   //

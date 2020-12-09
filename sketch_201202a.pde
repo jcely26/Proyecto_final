@@ -48,7 +48,7 @@ void keyTyped() {
     juego.restpunt();}
     if ((key == 'k' || key == 'K') ) {
     menu.setnum(3);
-      juego.nuevo();
+      juego.nuevoark();
     juego.restpunt();
   }
    if ((key == 'l' || key == 'L') ) {

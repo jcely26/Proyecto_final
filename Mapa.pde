@@ -18,7 +18,7 @@ class Mapa {
         }
       }
     }
-agregarfichas(num);  
+//agregarfichas(num);  
 }
   int[][] getmapa() {
 

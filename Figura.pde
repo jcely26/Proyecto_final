@@ -85,7 +85,8 @@ int cambcoordx(int x){
     }
     int[][] aux=this.getauxiliar();
     for (int i = 0; i<=2; i++) {
-      if ( m.getmapa()[this.posicion[1]+aux[i][0]][this.posicion[0]+this.limites()[2]] != 0|| (this.posicion[0]+this.limites()[2]!= 9 && this.posicion[0]+this.limites()[2]!= z && this.posicion[0]+this.limites()[1]!=0)) {
+      if ( m.getmapa()[this.posicion[1]+aux[i][0]][this.posicion[0]+this.limites()[2]] != 0|| 
+      (this.posicion[0]+this.limites()[2]!= 9 && this.posicion[0]+this.limites()[2]!= z && this.posicion[0]+this.limites()[1]!=0)) {
 
         f= true;
       }
